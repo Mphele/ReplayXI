@@ -4,11 +4,11 @@ import { describe, expect, it } from 'vitest'
 import App from './App'
 
 describe('App', () => {
-  it('renders the generated development screen', () => {
+  it('renders the football pitch Canvas', () => {
     render(<App />)
 
     expect(
-      screen.getByRole('heading', { name: /get started/i }),
+      screen.getByRole('img', { name: /football pitch/i }),
     ).toBeInTheDocument()
   })
 })
