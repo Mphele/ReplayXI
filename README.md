@@ -97,4 +97,40 @@ Candidate datasets for early experiments include openly available samples from M
 
 ## Current status
 
-Replay XI is at the architecture and project-planning stage. No application has been scaffolded yet. The first implementation milestone will be chosen after the initial workflow and rules of engagement are agreed.
+Replay XI has its initial React and Python development toolchains. Product implementation has not started yet.
+
+## Development setup
+
+### Web application
+
+From the repository root:
+
+```powershell
+cd web
+npm install
+npm run dev
+```
+
+Useful checks:
+
+```powershell
+npm run test:run
+npm run lint
+npm run build
+```
+
+### Data pipeline
+
+From the repository root, create and prepare a virtual environment:
+
+```powershell
+cd pipeline
+py -3.13 -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -e ".[dev]"
+```
+
+Run the Python tests with:
+
+```powershell
+.\.venv\Scripts\python.exe -m pytest
+```
